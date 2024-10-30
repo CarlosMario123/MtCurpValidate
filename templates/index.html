@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+        <h1 class="text-4xl font-bold mt-10">Bienvenido a la consulta de tu CURP</h1>
+        <div class="flex items-center  mt-6 font-semibold">
+            <a href="{{ url_for('curp.consulta_curp') }}" class="py-2 px-4 hover:underline text-2xl bg-custom-maroon text-white">
+                Consulta tu CURP
+            </a>
+            <a href="{{ url_for('curp.validar_curp_view') }}" class="text-white hover:underline bg-gray-400 py-2 px-4 text-2xl">
+                Validar tu CURP
+            </a>
+        </div>
+
+{% endblock %}

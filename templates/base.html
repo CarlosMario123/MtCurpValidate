@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta tu CURP</title>
+  
+    <link href="{{ url_for('static', filename='css/tailwind.min.css') }}" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Barra superior -->
+    <header class="bg-custom-maroon text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-4">
+            <div class="flex items-center">
+                <img src="{{ url_for('static', filename='img/Logo.webp') }}" alt="Logo" class="h-8 mr-4">
+                <span class="ml-4 text-lg font-semibold">RENAPO</span>
+            </div>
+            <div class="text-md flex gap-x-4">
+                <!-- ruta nombre y nombre de funcion para acceder -->
+               
+                <a href="{{ url_for('curp.consulta_curp') }}">Generar CURP</a>
+                <a href="{{ url_for('curp.validar_curp_view') }}" class="hover:underline">Validar CURP</a>
+                <a href="#" class="hover:underline">🔍</a>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="bg-yellow-700 text-white py-2">
+        <div class="container mx-auto px-4">
+            <span>Consulta tu CURP</span>
+        </div>
+    </div>
+
+ 
+    <main class="container mx-auto px-4 mt-8 flex flex-col">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>
