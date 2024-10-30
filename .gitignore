@@ -1,2 +1,16 @@
+# Ignorar todas las carpetas __pycache__ y archivos de bytecode
+__pycache__/
+*.py[cod]
+
+# Ignorar entornos virtuales
+venv/
+.env/
+
+# Ignorar configuraciones de IDEs
+.vscode/
+.idea/
+*.swp
 node_modules
-venv
+
+# Ignorar archivos de registro
+*.log
